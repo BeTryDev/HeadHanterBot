@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'ru.betry'
+version '1.0'
+
+mainClassName = 'ru.betry.App'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'com.github.pengrad:java-telegram-bot-api:5.2.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.4'
+}
+
+test {
+    useJUnitPlatform()
+}
